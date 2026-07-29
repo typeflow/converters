@@ -54,15 +54,15 @@ dev loop above.
 
 ## Layout
 
-| Path               | Role                                                        |
-| ------------------ | ------------------------------------------------------------ |
-| `index.ts`         | Typed wrapper: loads the addon, adapts the TS option shape   |
-| `scripts/build.ts` | Bun build script (cargo + `Bun.build` ESM/CJS)                |
-| `src/tf/`          | Rust: Typeflow lexer, parser, AST, canonical formatter        |
-| `src/jq/`          | Rust: parser, input-type inference, and emission for one supported source language |
+| Path               | Role                                                                                   |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| `index.ts`         | Typed wrapper: loads the addon, adapts the TS option shape                             |
+| `scripts/build.ts` | Bun build script (cargo + `Bun.build` ESM/CJS)                                         |
+| `src/tf/`          | Rust: Typeflow lexer, parser, AST, canonical formatter                                 |
+| `src/jq/`          | Rust: parser, input-type inference, and emission for one supported source language     |
 | `src/jsonata/`     | Rust: parser, input-type inference, and emission for another supported source language |
-| `src/sample.rs`    | Rust: `typeFromSample` (JSON sample → inline type)            |
-| `src/util.rs`      | Rust: JS-compatible number formatting, JSON quoting            |
+| `src/sample.rs`    | Rust: `typeFromSample` (JSON sample → inline type)                                     |
+| `src/util.rs`      | Rust: JS-compatible number formatting, JSON quoting                                    |
 
 Parity notes: number formatting reproduces ECMAScript `String(number)`
 (shortest round-trip plus ECMA-262 exponent layout), string quoting matches

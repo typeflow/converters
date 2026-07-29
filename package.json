@@ -26,10 +26,16 @@
   },
   "scripts": {
     "build": "bun scripts/build.ts",
-    "test": "cargo test"
+    "test": "cargo test",
+    "lint": "oxlint .",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
   },
   "devDependencies": {
-    "@napi-rs/cli": "^2.18.4"
+    "@napi-rs/cli": "^2.18.4",
+    "@typeflowjs/lint-config": "github:typeflow/lint-config",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0"
   },
   "optionalDependencies": {
     "@typeflowjs/converters-darwin-arm64": "0.0.1",
