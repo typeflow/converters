@@ -2,13 +2,21 @@
   "name": "@typeflowjs/converters",
   "version": "0.0.1",
   "description": "Typeflow converters as a native Node.js addon, written in Rust",
+  "license": "MIT",
+  "author": "Typeflow",
   "repository": {
     "type": "git",
     "url": "https://github.com/typeflow/converters"
   },
-  "license": "MIT",
-  "author": "Typeflow",
+  "files": [
+    "dist",
+    "index.d.ts",
+    "*.node"
+  ],
   "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
@@ -16,14 +24,6 @@
       "require": "./dist/index.cjs"
     }
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "index.d.ts",
-  "files": [
-    "dist",
-    "index.d.ts",
-    "*.node"
-  ],
   "scripts": {
     "build": "bun scripts/build.ts",
     "test": "cargo test",
@@ -43,9 +43,6 @@
     "@typeflowjs/converters-linux-x64-gnu": "0.0.1",
     "@typeflowjs/converters-win32-x64-msvc": "0.0.1"
   },
-  "engines": {
-    "node": ">= 18"
-  },
   "napi": {
     "name": "typeflow-converters",
     "triples": {
@@ -57,5 +54,8 @@
         "x86_64-unknown-linux-gnu"
       ]
     }
+  },
+  "engines": {
+    "node": ">= 18"
   }
 }
