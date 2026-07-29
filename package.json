@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Typeflow converters (jq / JSONata to Typeflow) as a native Node.js addon, written in Rust",
   "license": "MIT",
-  "author": "Thomas Farineau",
+  "author": "Typeflow",
   "repository": {
     "type": "git",
     "url": "https://github.com/typeflow/converters"
